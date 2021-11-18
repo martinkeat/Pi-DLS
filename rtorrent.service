@@ -9,4 +9,4 @@ ExecStart=/usr/bin/screen -d -m -fa -S rtorrent /usr/bin/rtorrent
 ExecStop=/usr/bin/killall -w -s 2 /usr/bin/rtorrent
 WorkingDirectory=%h
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
