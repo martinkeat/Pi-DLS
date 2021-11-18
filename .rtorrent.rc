@@ -1,7 +1,7 @@
 # Where rTorrent saves the downloaded files
 directory = /mnt/torrent/complete
 # Where rTorrent saves the session
-session = /srv/torrent/.session
+session = /mnt/torrent/incomplete/.session
 # Which ports rTorrent can use (Make sure to open them in your router)
 port_range = 50000-50000
 port_random = no
