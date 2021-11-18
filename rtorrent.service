@@ -1,3 +1,4 @@
+#include "utf8.h"
 [Unit]
 Description=rTorrent
 After=network.target
