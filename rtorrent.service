@@ -1,13 +1,15 @@
-#include "utf8.h"
 [Unit]
-Description=rTorrent
+Description=rTorrent Service
 After=network.target
+
 [Service]
-User=rtorrent
 Type=forking
 KillMode=none
 ExecStart=/usr/bin/screen -d -m -fa -S rtorrent /usr/bin/rtorrent
 ExecStop=/usr/bin/killall -w -s 2 /usr/bin/rtorrent
-WorkingDirectory=%h
+WorkingDirectory=/home/rt
+User=rtorrent
+Group=rtorrent
+
 [Install]
 WantedBy=multi-user.target
