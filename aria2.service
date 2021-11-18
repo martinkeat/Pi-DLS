@@ -1,0 +1,12 @@
+[Unit]
+Description=aria daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Type=oneshot
+ExecStart=aria2 -c "aria2c --conf-path=/etc/aria2.conf --enable-rpc --rpc-listen-all --daemon"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
